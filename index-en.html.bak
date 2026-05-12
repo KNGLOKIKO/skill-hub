@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="ja" style="color-scheme: light;">
+<html lang="en" style="color-scheme: light;">
 <head>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4852374282936319" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skill Hub - オープンソーススキルプロジェクト集 | 人気プロジェクト500+選</title>
-    <meta name="description" content="Skill Hubでは、プログラミング・AI・Agentなどの人気オープンソーススキルプロジェクトを厳選。Star数順で表示し、中日英多言語の紹介を提供。">
+    <title>Skill Hub - Open Source Skill Projects | 500+ Curated Projects</title>
+    <meta name="description" content="Skill Hub curates popular open source skill projects in programming, AI, agents and more. Sorted by stars, with multilingual descriptions to help you find top open source resources.">
     <meta name="theme-color" content="#0a152d">
     
-    <link rel="canonical" href="https://skillhub.example.com/index-ja.html">
+    <link rel="canonical" href="https://skillhub.example.com/index-en.html">
     <link rel="alternate" hreflang="zh-CN" href="https://skillhub.example.com/index-zh-CN.html">
     <link rel="alternate" hreflang="zh-TW" href="https://skillhub.example.com/index-zh-TW.html">
     <link rel="alternate" hreflang="ja" href="https://skillhub.example.com/index-ja.html">
     <link rel="alternate" hreflang="en" href="https://skillhub.example.com/index-en.html">
     <link rel="alternate" hreflang="x-default" href="https://skillhub.example.com/index-en.html">
-    <meta property="og:title" content="Skill Hub - オープンソーススキルプロジェクト集 | 人気プロジェクト500+選">
-    <meta property="og:description" content="Skill Hubでは、プログラミング・AI・Agentなどの人気オープンソーススキルプロジェクトを厳選。Star数順で表示し、中日英多言語の紹介を提供。">
+    <meta property="og:title" content="Skill Hub - Open Source Skill Projects | 500+ Curated Projects">
+    <meta property="og:description" content="Skill Hub curates popular open source skill projects in programming, AI, agents and more. Sorted by stars, with multilingual descriptions to help you find top open source resources.">
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="ja_JP">
+    <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="zh_CN">
     <meta property="og:locale:alternate" content="zh_TW">
-    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="ja_JP">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,12 +31,6 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     
-    <!-- Vercel Speed Insights -->
-    <script>
-        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/speed-insights/script.js"></script>
-
     <script>
         tailwind.config = {
             theme: {

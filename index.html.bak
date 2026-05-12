@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="ja" style="color-scheme: light;">
+<html lang="zh-CN" style="color-scheme: light;">
 <head>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4852374282936319" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skill Hub - オープンソーススキルプロジェクト集 | 人気プロジェクト500+選</title>
-    <meta name="description" content="Skill Hubでは、プログラミング・AI・Agentなどの人気オープンソーススキルプロジェクトを厳選。Star数順で表示し、中日英多言語の紹介を提供。">
+    <title>Skill Hub - 开源技能项目汇总 | 500+热门项目精选</title>
+    <meta name="description" content="Skill Hub 为你精选全球热门开源技能项目，涵盖编程、AI、Agent等方向，按Star数排序，提供中英日多语言简介，快速找到优质开源资源。">
     <meta name="theme-color" content="#0a152d">
     
-    <link rel="canonical" href="https://skillhub.example.com/index-ja.html">
+    <link rel="canonical" href="https://skillhub.example.com/index-zh-CN.html">
     <link rel="alternate" hreflang="zh-CN" href="https://skillhub.example.com/index-zh-CN.html">
     <link rel="alternate" hreflang="zh-TW" href="https://skillhub.example.com/index-zh-TW.html">
     <link rel="alternate" hreflang="ja" href="https://skillhub.example.com/index-ja.html">
     <link rel="alternate" hreflang="en" href="https://skillhub.example.com/index-en.html">
     <link rel="alternate" hreflang="x-default" href="https://skillhub.example.com/index-en.html">
-    <meta property="og:title" content="Skill Hub - オープンソーススキルプロジェクト集 | 人気プロジェクト500+選">
-    <meta property="og:description" content="Skill Hubでは、プログラミング・AI・Agentなどの人気オープンソーススキルプロジェクトを厳選。Star数順で表示し、中日英多言語の紹介を提供。">
+    <meta property="og:title" content="Skill Hub - 开源技能项目汇总 | 500+热门项目精选">
+    <meta property="og:description" content="Skill Hub 为你精选全球热门开源技能项目，涵盖编程、AI、Agent等方向，按Star数排序，提供中英日多语言简介，快速找到优质开源资源。">
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="ja_JP">
-    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:locale" content="zh_CN">
     <meta property="og:locale:alternate" content="zh_TW">
+    <meta property="og:locale:alternate" content="ja_JP">
     <meta property="og:locale:alternate" content="en_US">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,12 +31,6 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     
-    <!-- Vercel Speed Insights -->
-    <script>
-        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/speed-insights/script.js"></script>
-
     <script>
         tailwind.config = {
             theme: {
@@ -148,20 +142,72 @@
     <script>
         (function() {
             var path = window.location.pathname;
-            var filename = path.split('/').pop() || '';
+            var filename = path.split('/').pop() || 'index.html';
             var urlLangMap = {
                 'index-zh-CN.html': 'zh',
                 'index-zh-TW.html': 'zh-TW',
                 'index-ja.html': 'ja',
                 'index-en.html': 'en'
             };
-            window.__INITIAL_LANG = urlLangMap[filename] || null;
-            window.__LANG_TO_FILE = {
+            var LANG_TO_FILE = {
                 'zh': 'index-zh-CN.html',
                 'zh-TW': 'index-zh-TW.html',
                 'ja': 'index-ja.html',
                 'en': 'index-en.html'
             };
+            var SUPPORTED_LANGS = ['zh', 'zh-TW', 'ja', 'en'];
+
+            function safeGet(key) {
+                try { return localStorage.getItem(key); }
+                catch (e) { return null; }
+            }
+            function safeSet(key, value) {
+                try { localStorage.setItem(key, value); return true; }
+                catch (e) { return false; }
+            }
+            function mapLang(code) {
+                if (!code) return null;
+                var c = code.toLowerCase().trim();
+                if (c === 'zh-tw' || c === 'zh-hk' || c === 'zh-mo' || c === 'zh-hant' || c === 'zh-hant-tw' || c === 'zh-hant-hk') return 'zh-TW';
+                if (c === 'zh-cn' || c === 'zh-sg' || c === 'zh-hans' || c === 'zh-hans-cn' || c.indexOf('zh') === 0) return 'zh';
+                if (c.indexOf('ja') === 0) return 'ja';
+                if (c.indexOf('en') === 0) return 'en';
+                return null;
+            }
+
+            var urlLang = urlLangMap[filename] || null;
+
+            if (!urlLang) {
+                var saved = safeGet('lang');
+                if (saved && SUPPORTED_LANGS.indexOf(saved) !== -1) {
+                    if (saved !== 'zh') {
+                        window.location.replace(LANG_TO_FILE[saved]);
+                        return;
+                    }
+                } else {
+                    var detected = null;
+                    try {
+                        var browsers = navigator.languages || [];
+                        for (var i = 0; i < browsers.length; i++) {
+                            detected = mapLang(browsers[i]);
+                            if (detected) break;
+                        }
+                    } catch (e) {}
+                    if (!detected) {
+                        try {
+                            detected = mapLang(navigator.language || navigator.userLanguage || '');
+                        } catch (e) {}
+                    }
+                    if (detected && detected !== 'zh') {
+                        safeSet('lang', detected);
+                        window.location.replace(LANG_TO_FILE[detected]);
+                        return;
+                    }
+                }
+            }
+
+            window.__INITIAL_LANG = urlLang;
+            window.__LANG_TO_FILE = LANG_TO_FILE;
             window.__FILE_TO_LANG = urlLangMap;
         })();
     </script>
