@@ -1,0 +1,21 @@
+{
+  "routes": [
+    {
+      "src": "/index.html",
+      "status": 301,
+      "headers": { "Location": "/" }
+    },
+    {
+      "src": "/404",
+      "status": 302,
+      "headers": { "Location": "/404-zh-CN.html" }
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/404",
+      "destination": "/404-zh-CN.html",
+      "permanent": false
+    }
+  ]
+}

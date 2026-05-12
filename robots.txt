@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://skill-hub-liart.vercel.app/sitemap.xml

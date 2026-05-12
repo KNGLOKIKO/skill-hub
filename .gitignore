@@ -1,0 +1,38 @@
+# Environment variables and sensitive configuration
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build outputs
+dist/
+build/
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Dependencies (if we add package management later)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+
+# OS files
+Thumbs.db
+.DS_Store
