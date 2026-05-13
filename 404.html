@@ -79,14 +79,13 @@
 
             var detected = detectLang();
             if (LANG_TO_FILE_404[detected]) {
-                window.location.replace('/' + LANG_TO_FILE_404[detected]);
+                window.location.replace(LANG_TO_FILE_404[detected]);
             }
         })();
     </script>
 </head>
 <body>
     <div class="min-h-screen bg-[#f9fafb]">
-        <!-- Main Content -->
         <div class="flex items-center justify-center px-6 py-20">
             <div class="relative w-full max-w-5xl mx-auto rounded-[48px] bg-white border border-slate-200/50 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.03)] overflow-hidden">
                 <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden select-none">
@@ -110,7 +109,7 @@
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-4 mb-10">
-                        <a href="/" 
+                        <a href="index-zh-CN.html" 
                            class="inline-flex items-center justify-center gap-2 bg-[#0a152d] hover:bg-blue-700 text-white px-8 py-4 rounded-xl text-sm md:text-base font-medium transition-colors shadow-[0_8px_30px_rgba(10,21,45,0.15)] hover:shadow-[0_12px_40px_rgba(10,21,45,0.25)] hover:-translate-y-0.5 active:translate-y-0">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
@@ -122,19 +121,19 @@
                     <div class="flex items-center gap-4 flex-wrap justify-center">
                         <span class="text-[12px] text-slate-400">选择语言：</span>
                         <div class="flex gap-2">
-                            <a href="/404-zh-CN.html" 
+                            <a href="404-zh-CN.html" 
                                class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-blue-100 text-slate-600 hover:text-blue-600 text-sm font-medium transition-colors">
                                 简体中文
                             </a>
-                            <a href="/404-zh-TW.html" 
+                            <a href="404-zh-TW.html" 
                                class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-blue-100 text-slate-600 hover:text-blue-600 text-sm font-medium transition-colors">
                                 繁體中文
                             </a>
-                            <a href="/404-en.html" 
+                            <a href="404-en.html" 
                                class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-blue-100 text-slate-600 hover:text-blue-600 text-sm font-medium transition-colors">
                                 English
                             </a>
-                            <a href="/404-ja.html" 
+                            <a href="404-ja.html" 
                                class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-blue-100 text-slate-600 hover:text-blue-600 text-sm font-medium transition-colors">
                                 日本語
                             </a>
@@ -144,7 +143,6 @@
             </div>
         </div>
         
-        <!-- Footer - Same as main site -->
         <footer class="bg-slate-900 text-white py-16 mt-20">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -157,14 +155,14 @@
                     <div>
                         <h4 class="font-medium mb-4">快速链接</h4>
                         <ul class="space-y-2 text-slate-400 text-sm">
-                            <li><a href="/" class="hover:text-white transition-colors">首页</a></li>
+                            <li><a href="index-zh-CN.html" class="hover:text-white transition-colors">首页</a></li>
                             <li><a href="https://github.com/topics/skill" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Skill 话题</a></li>
                         </ul>
                     </div>
                     <div>
                         <h4 class="font-medium mb-4">法律信息</h4>
                         <ul class="space-y-2 text-slate-400 text-sm">
-                            <li><a href="/copyright.html" class="hover:text-white transition-colors">版权声明</a></li>
+                            <li><a href="copyright.html" class="hover:text-white transition-colors">版权声明</a></li>
                         </ul>
                     </div>
                 </div>
