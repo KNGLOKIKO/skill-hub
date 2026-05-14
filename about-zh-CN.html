@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="color-scheme: light;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - Skill Hub</title>
+    <meta name="description" content="了解 Skill Hub 的使命和愿景">
+    <meta name="theme-color" content="#0a152d">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;500;600;700&family=Outfit:wght=400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'display': ['Outfit', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#0a152d',
+                        'accent': '#3b82f6',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', system-ui, sans-serif; background: #f9fafb; color-scheme: light; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200/50">
+        <div class="max-w-4xl mx-auto px-6 py-3 flex items-center justify-between">
+            <a href="index-zh-CN.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                <svg class="w-7 h-7 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                <span class="font-semibold text-lg text-slate-800">Skill Hub</span>
+            </a>
+            <a href="index-zh-CN.html" class="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                返回首页
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-1 max-w-3xl mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+            <h1 class="font-display text-3xl md:text-4xl font-semibold text-[#0a1b33] mb-3">关于我们</h1>
+            <p class="text-sm text-slate-500">了解 Skill Hub 的使命和愿景</p>
+        </div>
+
+        <div class="bg-white rounded-3xl shadow-sm border border-slate-200/50 p-8 md:p-12 space-y-10">
+            
+            <section>
+                <h2 class="text-xl font-semibold text-slate-800 mb-4 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white text-sm font-bold">1</span>
+                    我们的使命
+                </h2>
+                <div class="space-y-3 text-slate-600 leading-relaxed ml-11">
+                    <p>Skill Hub 旨在为开发者提供一个集中、高效的开源项目发现平台，汇聚全球最优质的技能项目，让开发者能够快速找到符合自己需求的技术资源。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold text-slate-800 mb-4 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white text-sm font-bold">2</span>
+                    我们的特色
+                </h2>
+                <div class="space-y-3 text-slate-600 leading-relaxed ml-11">
+                    <ul class="space-y-2">
+                        <li><strong>500+热门开源项目</strong> - 精心挑选全球最受欢迎的技能相关开源项目</li>
+                        <li><strong>多语言支持</strong> - 提供中文（简体/繁体）、英文、日文界面</li>
+                        <li><strong>智能搜索</strong> - 支持按名称、描述、标签搜索</li>
+                        <li><strong>按Star数排序</strong> - 优先显示最受欢迎的项目</li>
+                        <li><strong>免费开放</strong> - 所有数据实时更新</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold text-slate-800 mb-4 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white text-sm font-bold">3</span>
+                    数据来源
+                </h2>
+                <div class="space-y-3 text-slate-600 leading-relaxed ml-11">
+                    <p>所有项目数据均来自 GitHub 的公开信息，包括项目描述、Star 数、编程语言、标签等，数据均由 GitHub 提供。我们会定期更新项目信息，确保数据的时效性。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold text-slate-800 mb-4 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white text-sm font-bold">4</span>
+                    开源精神
+                </h2>
+                <div class="space-y-3 text-slate-600 leading-relaxed ml-11">
+                    <p>我们热爱开源，相信开源的力量。Skill Hub 本身也是一个开源项目，欢迎社区贡献和反馈。</p>
+                </div>
+            </section>
+
+            <div class="ml-11 bg-slate-50 rounded-2xl p-6 border border-slate-100">
+                <h3 class="font-semibold text-slate-800 mb-3 text-sm">联系方式</h3>
+                <p class="text-sm text-slate-500 leading-relaxed">
+                    如有任何问题或建议，欢迎通过邮箱联系我们：<a href="mailto:Kng@coze.email" class="text-blue-600 hover:text-blue-700 font-medium">Kng@coze.email</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-10 text-center">
+            <a href="index-zh-CN.html" class="inline-flex items-center gap-2 bg-[#0a152d] text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                返回首页
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                    <span class="text-slate-400 text-sm">Skill Hub</span>
+                </div>
+                <div class="flex items-center gap-6 text-sm text-slate-400">
+                    <a href="index-zh-CN.html" class="hover:text-white transition-colors">首页</a>
+                    <a href="about-zh-CN.html" class="text-blue-400">关于我们</a>
+                    <a href="contact-zh-CN.html" class="hover:text-white transition-colors">联系我们</a>
+                    <a href="copyright.html" class="hover:text-white transition-colors">版权声明</a>
+                </div>
+            </div>
+            <p class="text-center text-slate-500 text-xs mt-6">精选500+热门开源技能项目，按Star数排序，提供多语言简介。数据来源：GitHub Skill 话题。</p>
+        </div>
+    </footer>
+</body>
+</html>
